@@ -1,0 +1,47 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        {% include "header.html" %}
+
+        <title>Contact</title>
+    </head>
+    <body>
+    {% include "navbar.html" %}
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-6">
+            <div class="alert alert-warning">
+                <strong>Postal Address: </strong><br><br>
+                Bangla A<br>
+                Road B<br>
+                Pin 837281
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="alert alert-warning">
+                <p>Fill free to write for any query :</p><br>
+
+                    <form role="form" action="" method="post">
+                    {% csrf_token %}
+                        {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+        <!--Contact form submission here-->
+    <hr>
+<div class="container">
+    <div class="jumbotron text-center">
+        If you have an query related to FDS, you an also write us at: kanhamishra97@yahoo.in<br>
+    </div>
+</div>
+
+        <!--Contact form submission ends here-->
+        {% include "footer.html" %}
+
+        {% include "scripts.html" %}
+    </body>
+</html>
