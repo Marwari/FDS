@@ -1,17 +1,13 @@
 <!Doctype html>
 <html lang="en">
     <head>
-        {% include "header.html"%}
+        {% include "header.html" %}
 
         <title>Home</title>
     </head>
     <body>
 
-    {% if user.is_authenticated %}
-        {% include "loggedin-navbar.html" %}
-    {% else %}
-        {% include "navbar.html" %}
-    {% endif %}
+    {% include "navbar.html" %}
 
         <!--Index starts here-->
     <div class="container form-top-margin-100">
