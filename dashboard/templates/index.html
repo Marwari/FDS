@@ -1,0 +1,56 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        {% include "header.html"%}
+
+        <title>Home</title>
+    </head>
+    <body>
+
+    {% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}
+
+        <!--Index starts here-->
+    <div class="container form-top-margin-100">
+    <div class="row">
+        <div class="col-sm-5">
+            <img src="../static/images/creditfraud.png">
+        </div>
+        <div class="col-xs-12 col-sm-7">
+            <div class="list-group">
+             <a href="/about" class="list-group-item active">
+            <h4 class="list-group-item-heading">FDS is an effort to brings the advantages of AI to the masses of Rajasthan.</h4><br>
+             <p class="list-group-item-text">The artificial intelligence and machine learning helps in huge data
+                 analysis and also help in getting predictions with maximum accuracy.</p>
+             </a>
+             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-9">
+        <div class="jumbotron">
+        <p>In the world of AI being computer literate isn't just enough. Data has to be obtained and
+        analysed for improving the quality of life of the people. The major giant companies and governments
+        now started using AI to help this system.</p>
+    </div>
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+
+    <div class="col">
+
+    </div>
+    </div>
+
+    <!--Index page ends-->
+
+        {% include "footer.html" %}
+
+        {% include "scripts.html" %}
+    </body>
+</html>
