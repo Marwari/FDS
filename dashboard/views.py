@@ -1,4 +1,5 @@
 from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.template.loader import get_template
@@ -68,6 +69,13 @@ def login_view(request):
         return redirect("/")
     return render(request, 'login.html',{"form":form})
 
+# logout view
+@login_required(login_url='/login/')
 def logout_view(request):
     logout(request)
     return render(request, "index.html")
+
+# service view
+@login_required(login_url='/login/')
+def services(request):
+    return render(request, 'services.html')

@@ -1,0 +1,88 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        {% include "header.html" %}
+
+        <title>Services</title>
+    </head>
+    <body>
+ {% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}
+        <!--A dismissible info box-->
+<div class="container">
+    <div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>Info!</h4>
+  <p> For other type of fraud detection and data analysis <a href="/contact" class="alert-link">Feel free to refer to out Contact page</a>.</p>
+</div>
+
+    <!-- navigation for services starts here -->
+
+		<div class="row">
+
+					<div class="col-xs-6 col-md-3">
+		<ul class="nav nav-pills nav-stacked ">
+			<li class="active"><a href="#bank">Bank Fraud Detection</a></li>
+			<li><a href="#credit">Credit Card Detection</a></li>
+			<li><a href="#">Mobile Money Transcation</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					Upcoming services <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Ecommerce fraud detection. </a></li>
+					<li><a href="#">Money laundering detection.</a></li>
+					<li><a href="#">Tax fraud detection</a></li>
+					<li class="divider"></li>
+					<li><a href="/contact">Feel free to contact us.</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+
+
+<!-- Info of services starts here -->
+            <div class="col-xs-6 col-md-9">
+
+<div class="card" id="bank">
+  <div class="card-body">
+    <h4 class="card-title">Bank Fraud Detection</h4>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <p class="card-text">Detects fraud in baking sector by analysis of historical data.</p>
+    <a href="/bank" class="card-link btn btn-primary">Detect a fraud</a>
+  </div>
+</div>
+
+
+<div class="card" id="credit">
+  <div class="card-body">
+    <h4 class="card-title">Credit Fraud Detection</h4>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <p class="card-text">Detects fraud in credit card based on a pattern.</p>
+    <a href="/creditcard" class="card-link btn btn-primary">Detect a fraud</a>
+  </div>
+</div>
+
+                <div class="card" id="money">
+  <div class="card-body">
+    <h4 class="card-title">Mobile money detection.</h4>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <p class="card-text">Detects fraud in mobile money transactions.</p>
+    <a href="/mobilefraud" class="card-link btn btn-primary">Detect a fraud</a>
+  </div>
+</div>
+
+			</div>
+
+		</div>
+		</div>
+
+        <!--Services page ends here-->
+        {% include "footer.html" %}
+
+        {% include "scripts.html" %}
+    </body>
+</html>
