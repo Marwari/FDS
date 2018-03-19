@@ -1,10 +1,126 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        {% include "header.html" %}
+
+        <title>Bank fraud detection</title>
+    </head>
+    <body>
+ {% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}
+        <!--A dismissible info box-->
+<div class="container">
+    <div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>Info!</h4>
+  <p> For other type of fraud detection and data analysis <a href="/contact" class="alert-link">Feel free to refer to out Contact page</a>.</p>
+</div>
+
+    <!-- navigation for services starts here -->
+
+		<div class="row">
+
+					<div class="col-xs-6 col-md-3">
+		<ul class="nav nav-pills nav-stacked ">
+			<li class="active"><a href="/bank">Bank Fraud Detection</a></li>
+			<li><a href="/creditcard">Credit Card Detection</a></li>
+			<li><a href="/mobilefraud">Mobile Money Transcation</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					Upcoming services <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Ecommerce fraud detection. </a></li>
+					<li><a href="#">Money laundering detection.</a></li>
+					<li><a href="#">Tax fraud detection</a></li>
+					<li class="divider"></li>
+					<li><a href="/contact">Feel free to contact us.</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+
+
+<!-- Info of services starts here -->
+            <div class="col-xs-6 col-md-9">
+				    <h4>Bank fraud detection</h4>
+                    We provide a bank fraud detection service as a demo.
+                    <form action='result/' method='post'>
+						{% csrf_token %}
+						<table class="table table-hover">
+
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Age</td>
+      <td><input type="number" name="age" required="required"></td>
+    </tr>
+   	<tr>
+      <th scope="row">2</th>
+      <td>Job</td>
+      <td><input type="number" name="job" required="required"></td>
+    </tr>
+  <tr>
+      <th scope="row">3</th>
+      <td>Marital</td>
+      <td><input type="number" name="marital" required="required"></td>
+    </tr>
+  <tr>
+      <th scope="row">4</th>
+      <td>Education</td>
+      <td><input type="number" name="education" required="required"></td>
+    </tr>
+  <tr>
+      <th scope="row">5</th>
+      <td>Balance</td>
+      <td><input type="number" name="balance" required="required"></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Housing</td>
+      <td><input type="number" name="housing" required="required"></td>
+    </tr>
+   <tr>
+        <tr>
+      <th scope="row">7</th>
+      <td>Loan</td>
+      <td><input type="number" name="loan" required="required"></td>
+    </tr>
+   <tr>
+        <tr>
+      <th scope="row">6</th>
+      <td>Duration</td>
+      <td><input type="number" name="duration" required="required"></td>
+    </tr>
+   <tr>
+        <tr>
+      <th scope="row">6</th>
+      <td>Poutcome</td>
+      <td><input type="number" name="poutcome" required="required"></td>
+    </tr>
+   <tr>
+      <th scope="row"></th>
+	   <td></td>
+      <td><input type='submit' class="btn btn-primary" value='Submit'></td>
+    </tr>
+  </tbody>
+		</table>
+					</form>
+
+
+
+
+			</div>
+
+		</div>
+		</div>
+
+        <!--Services page ends here-->
+        {% include "footer.html" %}
+
+        {% include "scripts.html" %}
+    </body>
 </html>
