@@ -26,5 +26,11 @@ urlpatterns = [
     path('login/', views.login_view),
     path('logout/', views.logout_view),
     path('services/', views.services),
+    path('bank/', views.bank),
+    path('creditcard/', views.creditcard),
+    path('mobilefraud/', views.mobilefraud),
+    path('bank/result/', views.bankresult),
+    path('creditcard/result/', views.creditresult),
+    path('mobilefraud/result/', views.mobileresult),
 
 ]
