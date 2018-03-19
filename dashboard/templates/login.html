@@ -1,0 +1,61 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        {% include "header.html"%}
+
+        <title>Login</title>
+    </head>
+    <body>
+    {% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}
+
+        <!--Login Form starts here-->
+            <div class="container form-top-margin-100">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="../static/images/creditfraud.png">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+        </div>
+                <div class="col-sm-3">
+                   <div class = "panel panel-default">
+                    <div class = "panel-body text-center">
+                        Login Here
+                     </div>
+                    </div>
+             <form method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}<hr>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-9">
+        <div class="jumbotron">
+        <p>In the world of AI being computer literate isn't just enough. Data has to be obtained and
+        analysed for improving the quality of life of the people. The major giant companies and governments
+        now started using AI to help this system.</p>
+    </div>
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+
+    <div class="col">
+
+    </div>
+    </div>
+            </div>
+        <!--Login form ends here-->
+
+        {% include "footer.html" %}
+
+        {% include "scripts.html" %}
+    </body>
+</html>

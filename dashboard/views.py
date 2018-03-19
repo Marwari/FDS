@@ -1,7 +1,9 @@
+from django.contrib.auth import logout, login, authenticate
 from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.template.loader import get_template
-from .forms import ContactForm
+from .forms import ContactForm, UserLoginForm
+
 
 # view for index page
 def index(request):
@@ -48,6 +50,24 @@ def contact(request):
         'form': form_class,
     })
 
-#success page
+# success page
 def success(request):
     return render(request, 'success.html')
+
+# login page
+def login_view(request):
+    next = request.GET.get('next')
+    form = UserLoginForm(request.POST or None)
+    if form.is_valid():
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        if next:
+            return redirect(next)
+        return redirect("/")
+    return render(request, 'login.html',{"form":form})
+
+def logout_view(request):
+    logout(request)
+    return render(request, "index.html")
