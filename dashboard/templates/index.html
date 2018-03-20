@@ -7,8 +7,11 @@
     </head>
     <body>
 
-    {% include "navbar.html" %}
-
+{% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}
         <!--Index starts here-->
     <div class="container form-top-margin-100">
     <div class="row">
