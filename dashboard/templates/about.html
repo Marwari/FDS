@@ -1,32 +1,34 @@
 <!Doctype html>
 <html lang="en">
     <head>
-        {% include "header.html" %}
+        {% include "header.html"%}
 
         <title>About FDS</title>
     </head>
     <body>
-{% if user.is_authenticated %}
+         {% if user.is_authenticated %}
         {% include "loggedin-navbar.html" %}
     {% else %}
         {% include "navbar.html" %}
     {% endif %}
-        <!--FDS message-->
+
+        <!--about message Form-->
 <div class="container">
-    <div class="jumbotron">
+
         <h1>What is FDS ?</h1>
-        <p>FDS is an effort to bring the advantages of <b>AI<i> (Artificial Intelligence)</i></b> and <b>
-            Machine Learning
-        </b> to masses of Rajasthan. It is designed to leverage AI for various type of tasks as:</p>
+        <hr>
         <p>
-            <b>Detection : </b> It will require some data from user and based on that detect that user is genuine or a fraud.<br>
+             Machine learning has been instrumental in solving some of the important business problems such as detecting email spam, focused product recommendation, accurate medical diagnosis etc. The adoption of machine learning (ML) has been accelerated with increasing processing power, availability of big data and advancements in statistical modeling. Fraud management has been painful for banking and commerce industry. The number of transactions has increased due to a plethora of payment channels – credit/debit cards, smartphones, kiosks. At the same time, criminals have become adept at finding loopholes. As a result, it’s getting tough for businesses to authenticate transactions. Data scientists have been successful in solving this problem with machine learning and predictive analytics. Automated fraud screening systems powered by machine learning can help businesses in reducing fraud.</>
+        </p>
+        <p>
+            FDS is an effort to bring the advantages of <b>AI<i> (Artificial Intelligence)</i></b> and <b>Machine Learning</b> to masses of Rajasthan. It is designed to leverage AI for various type of tasks as:</p>
+        <p>
+    <p><b>Detection : </b> It will require some data from user and based on that detect that user is genuine or a fraud.<br></p>
             <b>Analytics : </b> It will require data from user and based on that that analyse various of thing.<br>
         </p>
-        <p>This services provide various opportunity to financial institutes. There is ability to train system to recognise
-        and analyse things. System has various applications.</p>
-    </div>
+
 </div>
-        <!--FDS message stops-->
+        <!--about message ends here-->
         {% include "footer.html" %}
 
         {% include "scripts.html" %}
