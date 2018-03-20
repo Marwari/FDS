@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        {% include "header.html" %}
+
+        <title>Analytics</title>
+    </head>
+    <body>
+ {% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}
+        <!--A dismissible info box-->
+
+    <!-- navigation for analytics starts here -->
+    {{ result }}
+<div class="text-center">
+    <hr>
+    <h3>A graphical data analtics that show <b>Retired</b> people have more <b>money</b> in their accounts.</h3>
+<img src="../static/images/analytics.png">
+</div>
+
+        <!--anlytics page ends here-->
+<footer id="footer">
+    <div class="footer-copyright">
+        <div class="navbar navbar-inner navbar-bottom">
+            <p class="muted credit text-center panel-footer">
+                Team MMU | Rajasthan Hackathon 4.0 | DOIT & C
+            </p>
+        </div>
+    </div>
+</footer>
+        {% include "scripts.html" %}
+    </body>
+</html>

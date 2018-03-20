@@ -54,45 +54,57 @@
 						<table class="table table-hover">
 
   <tbody>
-    <tr>
+  <tr>
       <th scope="row">1</th>
+      <td>Time (Hr.)</td>
+
+      <td><input type="number" name="step" required="required"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
       <td>Account type</td>
-      <td><input type="number" name="type" required="required"></td>
+        <td><select name="type">
+          <option value="Payment">Payment</option>
+          <option value="Transfer">Transfer</option>
+          <option value="Cash-out">Cash-out</option>
+          <option value="Debit">Debit</option>m
+      </select>
+      </td>
     </tr>
    	<tr>
-      <th scope="row">2</th>
+      <th scope="row">3</th>
       <td>Amount</td>
       <td><input type="number" name="amount" required="required"></td>
     </tr>
   <tr>
-      <th scope="row">3</th>
+      <th scope="row">4</th>
       <td>Sender id</td>
       <td><input type="number" name="nameOrig" required="required"></td>
     </tr>
   <tr>
-      <th scope="row">4</th>
+      <th scope="row">5</th>
       <td>Sender old balance</td>
       <td><input type="number" name="oldbalanceOrg" required="required"></td>
     </tr>
   <tr>
-      <th scope="row">5</th>
+      <th scope="row">6</th>
       <td>Sender new balance</td>
       <td><input type="number" name="newbalanceOrig" required="required"></td>
     </tr>
     <tr>
-      <th scope="row">6</th>
+      <th scope="row">7</th>
       <td>Reciever id</td>
       <td><input type="number" name="nameDest" required="required"></td>
     </tr>
    <tr>
        <tr>
-      <th scope="row">6</th>
+      <th scope="row">8</th>
       <td>Reciever old balance</td>
       <td><input type="number" name="oldbalanceDest" required="required"></td>
     </tr>
    <tr>
        <tr>
-      <th scope="row">6</th>
+      <th scope="row">9</th>
       <td>Reciever new balance</td>
       <td><input type="number" name="newbalanceDest" required="required"></td>
     </tr>

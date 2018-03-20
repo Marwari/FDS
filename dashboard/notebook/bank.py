@@ -5,7 +5,7 @@ df = pd.read_csv('C:\\Users\\Bharat\\PycharmProjects\\Rajasthan Hackathon 4.0\\F
 
 print(df.head())
 
-df = df[['age', 'job', 'marital', 'education', 'balance','housing', 'loan', 'duration', 'poutcome', 'y']]
+df = df[['age', 'job', 'marital', 'education', 'balance','housing', 'loan', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'y']]
 
 def handle_non_numerical_data(df):
     columns = df.columns.values
@@ -35,3 +35,4 @@ def bank_model():
     accuracy = clf.score(X_test, y_test)
     print(accuracy)
     return clf
+

@@ -8,7 +8,7 @@ import numpy as np
 from sklearn import cross_validation,svm
 
 df = pd.read_csv('C:\\Users\\Bharat\\PycharmProjects\\Rajasthan Hackathon 4.0\\FDS\\dashboard\\notebook\\mobiledata.csv')
-df=df[['type','amount','nameOrig','oldbalanceOrg','newbalanceOrig','nameDest','oldbalanceDest','newbalanceDest','isFraud','isFlaggedFraud']]
+df=df[['step','type','amount','nameOrig','oldbalanceOrg','newbalanceOrig','nameDest','oldbalanceDest','newbalanceDest','isFraud','isFlaggedFraud']]
 df.dropna(inplace=True)
 
 def handle_non_numerical_data(df):

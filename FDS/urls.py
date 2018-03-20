@@ -32,5 +32,6 @@ urlpatterns = [
     path('bank/result/', views.bankresult),
     path('creditcard/result/', views.creditresult),
     path('mobilefraud/result/', views.mobileresult),
+    path('analytics/', views.analytics),
 
 ]

@@ -61,17 +61,42 @@
    	<tr>
       <th scope="row">2</th>
       <td>Job</td>
-      <td><input type="number" name="job" required="required"></td>
+      <td><select name="job">
+          <option value="Unemployed">Unemployed</option>
+          <option value="Self-employed">Self-employed</option>
+          <option value="Services">Services</option>
+          <option value="Management">Management</option>
+          <option value="Blue-Collar">Blue-Collar</option>
+          <option value="Entrepreneur">Entrepreneur</option>
+          <option value="Admin">Admin</option>
+          <option value="Technician">Technician</option>
+          <option value="Student">Student</option>
+          <option value="House maid">House maid</option>
+          <option value="Retired">Retired</option>
+          <option value="Unknown">Unknown</option>
+      </select>
+      </td>
     </tr>
   <tr>
       <th scope="row">3</th>
       <td>Marital</td>
-      <td><input type="number" name="marital" required="required"></td>
+      <td><select name="marital">
+          <option value="Single">Single</option>
+          <option value="Married">Married</option>
+          <option value="Divorced">Divorced</option>
+      </select>
+      </td>
     </tr>
   <tr>
       <th scope="row">4</th>
       <td>Education</td>
-      <td><input type="number" name="education" required="required"></td>
+      <td><select name="education">
+          <option value="Unknown">Unknown</option>
+          <option value="Primary">Primary</option>
+          <option value="Secondary">Secondary</option>
+          <option value="Graduate">Graduate</option>m
+      </select>
+      </td>
     </tr>
   <tr>
       <th scope="row">5</th>
@@ -81,25 +106,61 @@
     <tr>
       <th scope="row">6</th>
       <td>Housing</td>
-      <td><input type="number" name="housing" required="required"></td>
+        <td><select name="housing">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+      </select>
+      </td>
     </tr>
    <tr>
         <tr>
       <th scope="row">7</th>
       <td>Loan</td>
-      <td><input type="number" name="loan" required="required"></td>
+        <td><select name="loan">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+      </select>
+      </td>
     </tr>
    <tr>
         <tr>
-      <th scope="row">6</th>
+      <th scope="row">8</th>
       <td>Duration</td>
       <td><input type="number" name="duration" required="required"></td>
     </tr>
    <tr>
+     <tr>
+      <th scope="row">9</th>
+      <td>Guarantor</td>
+         <td><select name="campaign">
+          <option value="1">1</option>
+          <option value="2">2</option>
+            <option value="3">3</option>
+          <option value="4">4</option>
+             <option value="5">5</option>
+          <option value="6">6</option>
+         </select></td>
+    </tr>
+     <tr>
+      <th scope="row">10</th>
+      <td>Pdays</td>
+      <td><input type="number" name="pdays" required="required"></td>
+    </tr>
+     <tr>
+      <th scope="row">11</th>
+      <td>Previous</td>
+      <td><input type="number" name="previous" required="required"></td>
+    </tr>
         <tr>
-      <th scope="row">6</th>
+      <th scope="row">12</th>
       <td>Poutcome</td>
-      <td><input type="number" name="poutcome" required="required"></td>
+        <td><select name="poutcome">
+          <option value="Unknown">Unknown</option>
+          <option value="Failure">Failure</option>
+            <option value="Failure">Success</option>
+          <option value="Failure">Other</option>
+      </select>
+      </td>
     </tr>
    <tr>
       <th scope="row"></th>
