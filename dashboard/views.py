@@ -10,6 +10,10 @@ from dashboard.notebook.bank import bank_model
 from dashboard.notebook.mobile_data import mobile_model
 
 from dashboard.notebook.graphs import result
+
+from dashboard.notebook.mobile_analytics import mobile_result
+
+from dashboard.notebook.creditcard_analytics import creditcard_result
 from .forms import ContactForm, UserLoginForm
 
 
@@ -189,7 +193,7 @@ def bankresult(request):
 
 
     # accuracy = 99.03
-    return render(request, 'bank/result.html', {"result": response, "accuracy" : accuracy})
+    return render(request, 'bank/result.html', {"result": response})
 
 # analytics
 # def analysis(request):
@@ -296,4 +300,4 @@ def mobileresult(request):
 
 # analytics page
 def analytics(request):
-    return render(request, 'analytics.html', {'analytics':result})
+    return render(request, 'analytics.html', {'analytics':result, "mobile_analytics": mobile_result, "creditcard_analytics": creditcard_result})
