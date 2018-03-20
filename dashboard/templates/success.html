@@ -6,8 +6,11 @@
         <title>Success</title>
     </head>
     <body>
-    {% include "navbar.html" %}
-        <!--Success message starts here-->
+{% if user.is_authenticated %}
+        {% include "loggedin-navbar.html" %}
+    {% else %}
+        {% include "navbar.html" %}
+    {% endif %}        <!--Success message starts here-->
 <div class="container">
     <div class="jumbotron">
         <h1>Your message is submitted successfully. </h1><br>
