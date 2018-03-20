@@ -92,6 +92,7 @@ def services(request):
     return render(request, 'services.html')
 
 # bank fraud page
+@login_required(login_url='/login/')
 def bank(request):
     return render(request, 'bank.html')
 # creditcard fraud page
@@ -192,8 +193,8 @@ def bankresult(request):
         response = 'Fraud'
 
 
-    # accuracy = 99.03
-    return render(request, 'bank/result.html', {"result": response})
+    accuracy = 0.8962983425414365
+    return render(request, 'bank/result.html', {"result": response, 'accuracy':accuracy})
 
 # analytics
 # def analysis(request):
