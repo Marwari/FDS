@@ -6,28 +6,23 @@
         <title>Contact</title>
     </head>
     <body>
-{% if user.is_authenticated %}
+ {% if user.is_authenticated %}
         {% include "loggedin-navbar.html" %}
     {% else %}
         {% include "navbar.html" %}
-    {% endif %}    <div class="container">
-        <div class="row">
-        <div class="col-sm-6">
-            <div class="alert alert-warning">
-                <strong>Postal Address: </strong><br><br>
-                Bangla A<br>
-                Road B<br>
-                Pin 837281
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <div class="alert alert-warning">
-                <p>Fill free to write for any query :</p><br>
-
+    {% endif %}
+ <div class="container">
+        <div class="row ">
+            <div class="col-xs-4 col-sm-offset-8">
+             <div class="alert alert-warning">
+                <strong>Fill free to write for any query :</strong>
+             </div>
+             <div class="col-xs-12">
                     <form role="form" action="" method="post">
                     {% csrf_token %}
                         {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
                     </form>
                     </div>
                 </div>
