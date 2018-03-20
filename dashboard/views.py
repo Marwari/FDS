@@ -7,7 +7,9 @@ from django.template.loader import get_template
 
 from dashboard.notebook.creditcard import credit_model
 from dashboard.notebook.bank import bank_model
+
 from dashboard.notebook.mobile_data import mobile_model
+
 from .forms import ContactForm, UserLoginForm
 
 
@@ -121,7 +123,14 @@ def bankresult(request):
     else:
         # print("Fraud")
         response = 'Fraud'
+
+
+    # accuracy = 99.03
     return render(request, 'bank/result.html', {"result": response})
+
+# analytics
+# def analysis(request):
+#     return render(request, 'analysis.html', {'accuracy': accuracy})
 
 # credit card services
 @login_required(login_url='/login/')
