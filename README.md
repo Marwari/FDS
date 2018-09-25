@@ -39,5 +39,5 @@ Explaining the Folders in code tree:<br>
 •	requirement.txt: all required libraries<br>
 ++++++++++
 
-## Contribitions
+## Contributions
 Team MMU : [Anant Mishra](https://github.com/anantmishra1997), [Aman Goyal](https://github.com/aman16997), [Kumar Abhinav Jha](https://github.com/Abhinav184), [Bharat Kumar](https://github.com/Marwari)
